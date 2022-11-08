@@ -19,7 +19,7 @@ children = r1_col3.number_input("children", step=1, value=0)
 money = r1_col4.number_input("money", step = 100, value= 1000)
 
 # 두번째 행
-r2_col1, r2_col2, r2_col3 = st.columns(3)
+r2_col1, r2_col2, r2_col3, r2_col4 = st.columns(4)
 
 r2_col1.write("smoker")
 smoker = r2_col1.checkbox("")
@@ -34,6 +34,11 @@ is_southwest = region_option[0] == region
 is_southeast = region_option[1] == region
 is_northwest = region_option[2] == region
 
+disease_option = ('diabetes', 'hypertension', 'etc' )
+disease= r2_col4.selectbox("disease", disease_option)
+is_diabetes = disease_option[0] == disease
+is_hypertension = disease_option[1] == disease
+is_etc = disease_option[2] == disease
 # 예측 버튼
 predict_button = st.button("예측")
 
