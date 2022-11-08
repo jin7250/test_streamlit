@@ -8,13 +8,15 @@ st.write("> 당신의 보험료를 예측해드립니다!")
 st.image('https://i.imgur.com/LRoLTlKb.jpg')
 
 # 첫번째 행
-r1_col1, r1_col2, r1_col3 = st.columns(3)
+r1_col1, r1_col2, r1_col3, r1_col4 = st.columns(3)
 
 age = r1_col1.number_input("age", step=1, value=23)
 
 bmi = r1_col2.number_input("bmi", value=34.40)
 
 children = r1_col3.number_input("children", step=1, value=0)
+
+money = r1_col4.number_input("money", step = 100, value= 1000)
 
 # 두번째 행
 r2_col1, r2_col2, r2_col3 = st.columns(3)
